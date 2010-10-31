@@ -1,0 +1,12 @@
+
+blah blah 
+
+
+
+function email_friends($p1,$p2)  {
+
+   wp_mail( 'christian@bolstad.se', 'subject 1', "b1: " . print_r($p1,1) . " b2: " . print_r($p2,1)  );
+   return $p1;
+}
+
+add_action('push_feed_submitted', 'email_friends',10,2);
