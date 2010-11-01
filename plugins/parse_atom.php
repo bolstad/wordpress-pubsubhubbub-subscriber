@@ -20,7 +20,7 @@ class BlogPost
         print "> " . $file_or_url . "\n";
         $xml_source = file_get_contents($file_or_url);
         
-        print $xml_source; 
+#        print $xml_source; 
         
         
         $x = simplexml_load_string($xml_source);
