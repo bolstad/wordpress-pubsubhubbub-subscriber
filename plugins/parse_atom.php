@@ -23,7 +23,10 @@ class BlogPost
 #        print $xml_source; 
         
         
-        $x = simplexml_load_string($xml_source);
+        $x = simplexml_load_string($xml_source,'SimpleXMLElement', LIBXML_NOCDATA);
+        
+        
+        )
 
         if(count($x) == 0)
             return;
