@@ -22,11 +22,16 @@ class BlogPost
         
 #        print $xml_source; 
         
+        $x = simplexml_load_string($xml_source);
         
-        $x = simplexml_load_string($xml_source,'SimpleXMLElement', LIBXML_NOCDATA);
         
         
-        )
+        print_r($x);
+//        print_r($x->entry->xpath(''));
+              
+//        print_r($mo);
+        die;
+        
 
         if(count($x) == 0)
             return;
