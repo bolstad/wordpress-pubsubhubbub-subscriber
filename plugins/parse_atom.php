@@ -19,6 +19,10 @@ class BlogPost
 
         print "> " . $file_or_url . "\n";
         $xml_source = file_get_contents($file_or_url);
+        
+        print $xml_source; 
+        
+        
         $x = simplexml_load_string($xml_source);
 
         if(count($x) == 0)
@@ -27,13 +31,13 @@ class BlogPost
 
         print_r($x);
 
-print "split har --- \n";
+        print "split har --- \n";
 
 //        foreach($x->channel->item as $item)
             foreach($x->entry as $item)
 
         {
-                print_r($item);
+        #        print_r($item);
 
                 $post = new BlogPost();
                 
