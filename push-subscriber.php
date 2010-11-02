@@ -63,6 +63,18 @@ function push_hook_header()
      }
 }
 
+function email_friends($p1,$p2)  {
+   
+    $myFile = "/tmp/testFile.txt";
+    $fh = fopen($myFile, 'w') or die("can't open file");
+    fwrite($fh, $p2);
+    fclose($fh);
+    $attachments = array($myFile);
 
+   wp_mail( 'christian@bolstad.se', 'subject 1', "b1: " . print_r($p1,1) . " b2: " . print_r($p2,1),$headers, $attachments );
+   return $p1;
+}
+
+add_action('push_feed_submitted', 'email_friends',10,2);
 
 ?>
