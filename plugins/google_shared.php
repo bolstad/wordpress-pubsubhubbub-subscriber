@@ -18,6 +18,10 @@
 				$author = $annotation[0]["child"]["http://www.w3.org/2005/Atom"]["author"][0]["child"]["http://www.w3.org/2005/Atom"]["name"][0]["data"];
 				print " Comment: $comment Author: $author\n";    
 			 }
+			  echo $item->get_title() . "\n";
+			  echo $item->get_date('j F Y | g:i a') . "\n";
+			  echo $item->get_description(); 
+			  echo "---\n";
 		}               
 	}
 
@@ -25,3 +29,4 @@
 	push_parse_greader_atom($atom);
 
 ?>
+	
