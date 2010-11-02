@@ -1,6 +1,6 @@
 <?php
-	require_once 'simplepie.inc.php';
 
+	require_once 'simplepie.inc.php';
 
 	function push_parse_greader_atom($atomdata)
 	{
